@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "pub_exe=test_pkg.test_publisher:main"
+            "pub_exe=test_pkg.test_publisher:main",
+            "sub_exe=test_pkg.test_subscriber:main"
         ],
     },
 )
