@@ -22,7 +22,7 @@ setup(
         'console_scripts': [
             "pub_exe=test_pkg.test_publisher:main",
             "sub_exe=test_pkg.test_subscriber:main",
-            "int_simple_exe=test_pkg.int_simple:main"
+            "pub_health_exe=test_pkg.pub_health:main"
 
         ],
     },
