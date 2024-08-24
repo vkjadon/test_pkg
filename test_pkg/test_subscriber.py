@@ -14,12 +14,11 @@
 
 import sys
 
-import rclpy
-from rclpy.executors import ExternalShutdownException
-from rclpy.node import Node
+import rclpy # type: ignore
+from rclpy.executors import ExternalShutdownException # type: ignore
+from rclpy.node import Node # type: ignore
 
-from std_msgs.msg import String
-
+from std_msgs.msg import String # type: ignore
 
 class MinimalSubscriber(Node):
 
@@ -35,7 +34,6 @@ class MinimalSubscriber(Node):
     def listener_callback(self, msg):
         self.get_logger().info('I heard: "%s"' % msg.data)
 
-
 def main(args=None):
     rclpy.init(args=args)
 
@@ -47,7 +45,6 @@ def main(args=None):
         pass
     except ExternalShutdownException:
         sys.exit(1)
-
 
 if __name__ == '__main__':
     main()
